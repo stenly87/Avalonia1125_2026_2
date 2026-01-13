@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Avalonia1132_2026_2.VM"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Avalonia1132_2026_2.MainWindow"
+        x:DataType="vm:MainVM"
+        Title="Avalonia1132_2026_2">
+    <Window.DataTemplates>
+        <DataTemplate DataType="vm:UserVM">
+            <StackPanel>
+                <Label Content="{Binding Name, StringFormat=Имя: {0}}"/>
+                <Label Content="{Binding Birthday, StringFormat=Дата рождения: dd.MM.yyyy}"/>
+                <Label Content="{Binding LazyLevel, StringFormat=Уровень лени: {0:F2}}"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.DataTemplates>
+    <Grid RowDefinitions="* Auto">
+        <ListBox ItemsSource="{Binding Users}" SelectedItem="{Binding SelectedUser}" />
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Добавить" Command="{Binding AddUserCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
+            <Button Content="Редактировать" Command="{Binding EditUserCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>

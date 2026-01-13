@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Avalonia1132_2026_2.VM"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Avalonia1132_2026_2.View.EditUserWindow"
+        x:DataType="vm:EditUserVM"
+        Title="EditUserWindow">
+    <StackPanel>
+        <StackPanel DataContext="{Binding User}">
+            <TextBox Text="{Binding Name}" />
+            <DatePicker SelectedDate="{Binding Birthday}" />
+            <Slider Minimum="1" Maximum="100"
+                    Value="{Binding LazyLevel}" />
+        </StackPanel>
+        <Button Content="Сохранить" Command="{Binding SaveCommand}" />
+    </StackPanel>
+</Window>
