@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Avalonia1132_2026_2/MainWindow.axaml" value="Avalonia1132_2026_2/Avalonia1132_2026_2.csproj" />
+        <entry key="Avalonia1132_2026_2/View/EditUserWindow.axaml" value="Avalonia1132_2026_2/Avalonia1132_2026_2.csproj" />
+        <entry key="Avalonia1132_2026_2/View/MainWindow.axaml" value="Avalonia1132_2026_2/Avalonia1132_2026_2.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

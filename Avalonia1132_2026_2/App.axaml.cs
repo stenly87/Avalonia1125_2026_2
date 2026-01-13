@@ -2,6 +2,7 @@ using System;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Avalonia1132_2026_2.DB;
 using Avalonia1132_2026_2.View;
 using Avalonia1132_2026_2.VM;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,6 +26,7 @@ public partial class App : Application
             services.AddTransient<MainWindow>();
             services.AddTransient<EditUserVM>();
             services.AddTransient<EditUserWindow>();
+            services.AddDbContext<_12pupupuContext>();
             
             Services = services.BuildServiceProvider();
 
