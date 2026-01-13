@@ -5,6 +5,11 @@ using Pomelo.EntityFrameworkCore.MySql.Scaffolding.Internal;
 
 namespace Avalonia1132_2026_2.DB;
 
+// команда для выполнения scaffold:
+//выполняется в папке с файлом csproj
+/*
+dotnet ef dbcontext scaffold "server=192.168.200.13;user=student;password=student;database=12pupupu" Pomelo.EntityFrameworkCore.Mysql -o DB
+*/
 public partial class _12pupupuContext : DbContext
 {
     public _12pupupuContext()
